@@ -1,10 +1,6 @@
 # coding=utf-8
 
-__title__ = 'zooz-python'
 __version__ = '0.2'
-__license__ = 'Apache 2.0'
-__author__ = 'Javier Cordero Martinez'
-__email__ = 'jcorderomartinez@gmail.com'
 
 import requests
 import logging
