@@ -8,8 +8,10 @@ from setuptools import setup, find_packages
 setup(
     name='zooz-python',
     version=zooz.__version__,
+    url='https://github.com/jneight/zooz-python',
     install_requires=['requests==1.2.3'],
     author=zooz.__author__,
+    author_email=zooz.__email__,
     include_package_data=True,
     packages=find_packages(),
     license=zooz.__license__,
