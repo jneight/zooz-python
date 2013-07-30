@@ -9,6 +9,7 @@ setup(
     name='zooz-python',
     version=zooz.__version__,
     install_requires=['requests==1.2.3'],
+    author=zooz.__author__,
     include_package_data=True,
     packages=find_packages(),
     license=zooz.__license__,

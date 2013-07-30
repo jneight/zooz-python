@@ -1,8 +1,9 @@
 # coding=utf-8
 
 __title__ = 'zooz-python'
-__version__ = '0.0.1'
+__version__ = '0.1'
 __license__ = 'Apache 2.0'
+__author__ = 'Javier Cordero Martinez'
 
 import requests
 import logging
@@ -81,7 +82,7 @@ class ZoozRequest(object):
 
         return self.requests.post(self.get_url, data=payload, headers=headers)
 
-    def get_transaction_status(self, transaction_id):
+    def get_transaction(self, transaction_id):
         """
             Get the info about a transaction using its ID
 
