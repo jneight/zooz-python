@@ -3,7 +3,12 @@ zooz-python
 
 Python interface to the [ZooZ](http://www.zooz.com) Extended Server API.
 
-For now, only getting transaction info is implemented.
+Already implemented:
+
+* Open a new transaction.
+
+* Get info of transaction by id.
+* Get all transactions done by an email.
 
 
 Enable sandbox mode
@@ -29,6 +34,20 @@ To get requests authorized, this info is needed:
 Doing requests!
 ---------------
 
+To open a transaction and get the token:
+
+```python
+import zooz
+
+request = zooz.ZoozRequest(unique_id='YOUR_UNIQUE_ID', app_key='YOUR_APP_KEY')
+
+# extra dict, is used to attach more info to the transaction, see ZooZ Mobile documentation
+request.open_transaction(amount, currency_code, extra)
+# if succedded , returns a dict with 'token' key
+```
+
+To use Extended Server API:
+
 ```python
 import zooz
 
@@ -40,3 +59,5 @@ request.get_transaction('TRANSACTION_ID')
 # to get a list of transactions done by an user
 request.get_transactions(user_email='USER_EMAIL')
 ```
+
+
