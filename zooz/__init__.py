@@ -158,11 +158,11 @@ class ZoozRequest(object):
         return headers
 
     @backoff_retry(retries=5)
-    def post(self, payload, headers):
+    def post(self, url, payload, headers):
         """
             Add authentication headers to the request
         """
-        return self.requests.post(self.get_url, data=payload, headers=headers)
+        return self.requests.post(url, data=payload, headers=headers)
 
     def get_transaction(self, transaction_id):
         """
@@ -183,7 +183,7 @@ class ZoozRequest(object):
         }
         headers = self.add_authentication_extended()
         logger.debug('[ZOOZ] get transaction with payload: %s', payload)
-        response = self.post(payload, headers).json()
+        response = self.post(self.get_url_extended, payload, headers).json()
         if int(response['ResponseStatus']) != 0:
             raise ZoozException(
                 response['ResponseObject']['errorMessage'],
@@ -213,7 +213,7 @@ class ZoozRequest(object):
         }
         headers = self.add_authentication_extended()
         logger.debug('[ZOOZ] get transactions for user: %s', payload)
-        response = self.post(payload, headers).json()
+        response = self.post(self.get_url_extended, payload, headers).json()
         if int(response['ResponseStatus']) != 0:
             raise ZoozException(
                 response['ResponseObject']['errorMessage'],
@@ -251,7 +251,8 @@ class ZoozRequest(object):
 
         headers = self.add_authentication()
         logger.debug('[ZOOZ] open transaction: %s', payload)
-        response = self._parse_response_nvp(self.post(payload, headers).text)
+        response = self._parse_response_nvp(
+            self.post(self.get_url, payload, headers).text)
         if int(response['statusCode']) != 0:
             raise ZoozException(
                 response['errorMessage'], response['statusCode'])
