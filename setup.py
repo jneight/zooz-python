@@ -1,22 +1,18 @@
 # coding=utf-8
 
-__title__ = 'zooz-python'
-__version__ = '0.3'
-__license__ = 'Apache 2.0'
-__author__ = 'Javier Cordero Martinez'
-__email__ = 'jcorderomartinez@gmail.com'
-
 
 from setuptools import setup, find_packages
 
+import zooz
+
 setup(
     name='zooz-python',
-    version=__version__,
+    version=zooz.__version__,
     url='https://github.com/jneight/zooz-python',
     install_requires=['requests==1.2.3'],
-    author=__author__,
-    author_email=__email__,
+    author=zooz.__author__,
+    author_email=zooz.__email__,
     include_package_data=True,
     packages=find_packages(),
-    license=__license__,
+    license=zooz.__license__,
 )
