@@ -1,6 +1,7 @@
 zooz-python
 ===========
 
+[![Build Status](https://travis-ci.org/jneight/zooz-python.png)](https://travis-ci.org/jneight/zooz-python)
 Python interface to the [ZooZ](http://www.zooz.com) Extended Server API.
 
 Already implemented:
