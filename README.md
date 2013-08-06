@@ -68,4 +68,15 @@ request.get_transaction('TRANSACTION_ID')
 request.get_transactions(user_email='USER_EMAIL')
 ```
 
+Testing
+--------
 
+Before calling tests, you will need to add some keys to your environment with
+ZooZ credentials:
+
+* `ZOOZ_UNIQUE_ID` with your unique ID.
+* `ZOOZ_APP_KEY` with your APP key
+
+```bash
+$ python setup.py test
+```
