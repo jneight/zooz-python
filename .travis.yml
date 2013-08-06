@@ -1,10 +1,12 @@
 language: python
 python:
-  - "2.7"
-  - "3.3"
-
+- '2.7'
+- '3.3'
 install:
-  - python setup.py -q install
-
+- python setup.py -q install
 script:
-  - python setup.py test
+- python setup.py test
+env:
+  global:
+  - secure: WKcrYrSP9WNTACwc7O+gGvnXakXNGzmZt+/xIUlfJVJCJCtXKH7sFKPl/5Ut/UgVUSHNR/a+/SlAzlihlBIRd0mng9SCDUSi5RnmiP47Fi9kB65EEj5IanI1EmTjkTMGU497wtbNYJASGYQXtEqNfHrv0VQb3SEwbArbmF2I7S0=
+  - secure: PDDdPpOt9IzHJoochJVn4r0sEPAIUglaL7d2+wC+AYtMZdcWMhB5ZYu5lwQ7Z5MXUdF1riw2aJRb8GGyGcq6PJNZd/PR9UPQQxR4lWPFUgY2ll1uTxNAYf6irCbEu2hABBr4f5orzRu56QvQXwrgyA0w9UMtTqNhzcJA9BXkJS4=
