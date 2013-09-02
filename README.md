@@ -2,12 +2,11 @@ zooz-python
 ===========
 
 [![Build Status](https://travis-ci.org/jneight/zooz-python.png)](https://travis-ci.org/jneight/zooz-python)
-Python interface to the [ZooZ](http://www.zooz.com) Extended Server API.
+Python interface to the [ZooZ](http://www.zooz.com) Server API.
 
 Already implemented:
 
 * Open a new transaction.
-
 * Get info of transaction by id.
 * Get all transactions done by an email.
 
