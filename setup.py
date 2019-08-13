@@ -9,7 +9,7 @@ setup(
     name='zooz-python',
     version=zooz.__version__,
     url='https://github.com/jneight/zooz-python',
-    install_requires=['requests==1.2.3'],
+    install_requires=['requests==2.20.0'],
     description="Python client for ZooZ payments API",
     author=zooz.__author__,
     author_email=zooz.__email__,
